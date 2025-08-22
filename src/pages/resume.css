@@ -1,0 +1,38 @@
+.resume-page { display: grid; gap: 2rem; }
+
+/* header */
+.resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.resume-title { margin: 3; font-size: 2rem; color: var(--fg); }
+
+/* button styling */
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-weight: 700; text-decoration: none;
+  border-radius: 999px; padding: .55rem 1rem;
+  border: 1px solid transparent;
+  transition: background-color .2s, color .2s, opacity .2s, border-color .2s;
+}
+.btn--accent { background: var(--accent); color: var(--bg); box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.btn--accent:hover,
+.btn--accent:focus-visible { opacity: .9; outline: 2px solid var(--fg); outline-offset: 2px; }
+.btn:hover, .btn:focus-visible { border-color: color-mix(in oklab, var(--fg) 25%, transparent); } /* color-mix gives a nice muted color that fits the theme */
+
+.resume-viewer { display: grid; }
+.resume-embed {
+  width: 100%;
+  height: min(78vh, 1100px);     /* for a responsive viewport */
+  border-radius: 12px;
+  background: var(--bg);
+  border: 0;
+}
+.resume-fallback { color: var(--fg); }
+
+/* for small screens */
+@media (max-width: 700px) {
+  .resume-title { font-size: 1.5rem; }
+}

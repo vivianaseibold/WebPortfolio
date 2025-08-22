@@ -1,0 +1,42 @@
+/* narrowing the width of the home page text column */
+.home-page { 
+  padding-block: 3rem 2rem;
+}
+
+.content:has(.home-page) .content-inner {
+  max-width: 60ch;            /* 60 characters per line */
+}
+
+.about-header {
+  max-width: 62ch;
+  margin-inline: auto;        /* centering within the rhs */
+}
+
+.about-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--fg);
+}
+
+.about-header p {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+  color: var(--fg);
+}
+
+/* Formatting on smaller screens */
+@media (max-width: 700px) {
+  .content:has(.home-page) .content-inner,
+  .about-header {
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+}
+
+.home-image {
+  width: 100%;
+  height: auto;        
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.18);
+}

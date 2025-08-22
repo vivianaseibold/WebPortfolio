@@ -1,0 +1,29 @@
+/* Light theme (default) */
+:root {
+  --bg: #fef3c7;     /* light cream background */
+  --fg: #0f1530;     /* deep blue text */
+  --accent: #0f1530; /* for hover/button highlight */
+  --muted: #2c3973;  /* subtitle in light mode */
+
+  --inv-bg: #0f1530;  /* dark */
+  --inv-fg: #fef3c7;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #0d163d;     /* deep blue background */
+  --fg: #fef3c7;     /* cream text */
+  --accent: #f5e08e; /* warm gold accent */
+  --muted: #f5e08e;  /* subtitle in dark mode */
+
+  --inv-bg: #fef3c7;  /* light */
+  --inv-fg: #0f1530;
+}
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+  transition: background-color .3s, color .3s;
+}

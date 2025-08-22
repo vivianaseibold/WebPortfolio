@@ -1,0 +1,113 @@
+/* inverse color scheme for the coursework cards */
+/* when in light mode, the cards should be dark, and vice versa */
+.cs-page { --inv-bg: #0f1530; --inv-fg: #fef3c7; }            
+[data-theme="dark"] .cs-page { --inv-bg: #fef3c7; --inv-fg: #0f1530; }
+
+.cs-page {
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* header formatting */
+.cs-header { display: grid; gap: 1rem; }
+
+.cs-title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: var(--fg);
+}
+
+.cs-intro {
+  margin: 0;
+  color: var(--fg);
+  line-height: 1.8;
+}
+
+/* skills tags */
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+  margin: .25rem 0 0;
+}
+
+.cs-tag {
+  /* color-mix gives a nice muted color that fits the theme */
+  background: color-mix(in oklab, var(--accent) 20%, var(--bg)); 
+  color: var(--fg);
+  border: 1px solid color-mix(in oklab, var(--fg) 20%, transparent);
+  padding: .3rem .6rem;
+  border-radius: 999px;
+  font-size: .9rem;
+}
+
+.cs-section { display: grid; gap: 1rem; scroll-margin-top: 1rem; }
+.cs-section__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.cs-section__title { margin: 0; font-size: 1.6rem; color: var(--fg); }
+.cs-blurb { margin: 0; color: var(--muted); }
+
+/* set the coursework into a grid - 2 columns that fold into 1 on a smaller screen */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .course-grid { grid-template-columns: 1fr; }
+}
+
+/* cards should be inverse themed colors */
+.course-card {
+  background: var(--inv-bg);                
+  color: var(--inv-fg);               
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: .5rem;
+}
+
+.course-head { display: grid; gap: .25rem; }
+.course-classNum {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .9rem;
+  color: color-mix(in oklab, var(--inv-fg) 70%, var(--inv-bg) 30%); /* muted inverse */
+}
+.course-title {
+  margin: 0;
+  font-size: 1rem;                     
+}
+.course-description {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* reusable button (for open site) */
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-weight: 700; text-decoration: none; border-radius: 999px;
+  padding: .55rem 1rem; transition: background-color .2s, color .2s, border-color .2s, opacity .2s;
+}
+.btn--accent { background: var(--accent); color: var(--bg); box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.btn--accent:hover, .btn--accent:focus-visible { opacity: .9; outline: 2px solid var(--fg); outline-offset: 2px; }
+
+/* Embed theF1Files preview */
+.embed-card {
+  border: 1px solid color-mix(in oklab, var(--fg) 15%, transparent);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--bg) 96%, var(--accent) 4%);
+  padding: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+.embed-frame {
+  width: 100%;
+  height: min(72vh, 900px);
+  border: 0;
+  border-radius: 10px;
+  background: var(--bg);
+}
+.embed-note { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.95rem; }
+

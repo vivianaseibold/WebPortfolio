@@ -1,0 +1,108 @@
+/* set cards into columns (the images don't all align - feels more raw) */
+.cards {
+  column-count: 3;     
+  column-gap: 1.25rem;
+}
+
+@media (max-width: 1100px) { .cards { column-count: 2; } }
+@media (max-width: 700px)  { .cards { column-count: 1; } }
+
+/* clickable cards */
+.card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 1.25rem;   
+  break-inside: avoid;
+  cursor: pointer;
+  text-align: left;
+  color: var(--fg);
+}
+
+.card__img {
+  width: 100%;
+  height: auto; /* don't resize images */
+  border-radius: 12px;
+}
+
+.card:hover .card__img,
+.card:focus-visible .card__img {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  outline: none;
+}
+
+.card__label {
+  display: inline-block;
+  color: var(--muted);
+}
+
+/* specifically for LilyPad painting to make sure its large enough (fits the right hand side of the screen) */
+.card--featured {
+  column-span: all; 
+  margin: 1rem 0 1.5rem;
+}
+
+/* put a shadow over the background behind the popup */
+.art-modal-backdrop {
+  position: fixed;         
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  align-items: flex-start;   
+  justify-content: center;
+  padding: 2rem 1rem;       
+  overflow-y: auto;         
+}
+
+/* make the popup scrollable for a smaller screen */
+.art-modal {
+  background: var(--bg);
+  color: var(--fg);
+  width: min(100%, 980px);
+  max-height: 90vh;
+  border-radius: 16px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  margin: 2rem auto;
+  -webkit-overflow-scrolling: contain;
+  overscroll-behavior: contain;
+}
+
+@media (min-width: 900px) {
+  .art-modal { grid-template-columns: 1.3fr 1fr; }
+}
+
+/* image stays its size in popup */
+.art-modal__image { padding: 1rem 1rem 0; }
+.modal__img {
+  width: 100%;
+  height: auto;          
+}
+
+/* formatting for text in the popup */
+.art-modal__meta { padding: 1rem 1.25rem 1.5rem; }
+
+.meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .75rem;
+  color: var(--muted);
+}
+
+/* format an X out button in top right corner */
+.close-btn {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 10000px;
+  font-size: 0.9rem;
+}
+.close-btn:hover,
+.close-btn:focus { outline: 2px solid var(--fg); }

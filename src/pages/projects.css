@@ -1,0 +1,113 @@
+/* right panel is wider */
+.content-inner { max-width: 1150px; }
+
+/* spaces the page how i want */
+.projects-page {
+  display: grid;
+  gap: 2rem;
+}
+
+/* header */
+.projects-header { display: grid; gap: 1rem; }
+
+.projects-title {
+  font-size: 2.5rem;
+  color: var(--fg);
+}
+
+.projects-intro {
+  margin: 0;
+  color: var(--fg);
+}
+
+/* styling buttons for jumping to section */
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: .5rem 0 0;
+  padding: 0;
+}
+/* style both <button> and <a> used as chips */
+.proj-tags .proj-tag {
+  appearance: none;
+  /* color-mix gives a nice muted color that fits the theme */
+  border: 1px solid color-mix(in oklab, var(--fg) 20%, transparent);
+  background: color-mix(in oklab, var(--accent) 20%, var(--bg));
+  color: var(--fg);
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color .2s, color .2s, border-color .2s, opacity .2s;
+}
+.proj-tags .proj-tag:hover,
+.proj-tags .proj-tag:focus-visible {
+  background: color-mix(in oklab, var(--accent) 35%, var(--bg));
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+/*   */
+.proj-section {
+  display: grid;
+  gap: 1rem;
+  scroll-margin-top: 1rem;
+}
+.proj-section__title { margin: 0; font-size: 1.4rem; color: var(--fg); }
+.proj-section__blurb { margin: 0; color: var(--muted); }
+
+/* title sits to the left and link button to the right in the same row */
+.proj-section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* button wraps for smaller screens */
+}
+
+/* styling the buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  border-radius: 999px;  
+  transition: background-color .2s, color .2s, border-color .2s, opacity .2s;
+}
+
+.btn--accent:hover,
+.btn--accent:focus-visible {
+  opacity: .9;
+  outline: 1px solid var(--fg);
+  outline-offset: 1px;
+}
+
+/* sample content is put into 3 columns that fit smaller within the rhs window */
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: .5rem;
+  align-items: start;
+}
+
+/* sample posts wrap over properly with a smaller screen */
+@media (max-width: 900px) {
+  .ig-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+
+/* cards */
+.ig-card {
+  display: block;  
+}
+
+.ig-card figure {
+  margin: 0;
+  display: flex;       
+  flex-direction: column;
+  gap: .25rem;          
+  min-width: 0;
+  }         

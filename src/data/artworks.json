@@ -1,0 +1,167 @@
+[
+  {
+    "id": "g1",
+    "file": "gallery1",
+    "title": "Lilypad Bridge",
+    "alt": "2-panel abstract art-deco style bridge over a lily pad pond",
+    "year": "2022",
+    "medium": "Acrylic on 2 Canvases",
+    "size": "24 × 48 in",
+    "description": "An abstract interpretation of a bridge over a lily pad pond.",
+    "featured": true
+  },
+  {
+    "id": "g2",
+    "file": "gallery2",
+    "title": "Untitled",
+    "alt": "green aura soulsucking woman",
+    "year": "2024",
+    "medium": "Oil on Canvas",
+    "size": "11 × 14 in",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g3",
+    "file": "gallery3",
+    "title": "Self Portrait",
+    "alt": "Brunette girl with black medical mask and orange shirt.",
+    "year": "2021",
+    "medium": "Oil on Canvas",
+    "size": "9 × 12 in",
+    "description": "Pandemic Self Portrait",
+    "featured": false
+  },
+  {
+    "id": "g4",
+    "file": "gallery4",
+    "title": "Untitled",
+    "alt": "abstract german expressionism style cracked glass and skull reflections.",
+    "year": "2021",
+    "medium": "Oil on Canvas",
+    "size": "14 × 11 in",
+    "description": "German expressionism take on monstrous reflections in a cracked mirror.",
+    "featured": false
+  },
+  {
+    "id": "g5",
+    "file": "gallery5",
+    "title": "Untitled",
+    "alt": "Two faces morphing into eachother.",
+    "year": "2023",
+    "medium": "Acrylic on Canvas",
+    "size": "6 × 6 in",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g6",
+    "file": "gallery6",
+    "title": "Untitled",
+    "alt": "zoomed in 3/4 side profile",
+    "year": "2022",
+    "medium": "Gouache and Ink on Paper",
+    "size": "",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g7",
+    "file": "gallery7",
+    "title": "Curious Eyes",
+    "alt": "A curious face framed by brunette locks peers around the corner.",
+    "year": "2022",
+    "medium": "Gouache and Ink on Paper",
+    "size": "",
+    "description": "A curious face framed by brunette locks peers around the corner.",
+    "featured": false
+  },
+  {
+    "id": "g8",
+    "file": "gallery8",
+    "title": "Untitled",
+    "alt": "Colorful face, Green hair, bright yellow and green polka dotted top.",
+    "year": "2022",
+    "medium": "Gouache on paper",
+    "size": "",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g9",
+    "file": "gallery9",
+    "title": "Azul",
+    "alt": "Abstract portrait of a woman in many shades of blue.",
+    "year": "2019",
+    "medium": "Acrylic on Board",
+    "size": "9 × 12 in",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g10",
+    "file": "gallery10",
+    "title": "Design 1",
+    "alt": "Fashion design",
+    "year": "2019",
+    "medium": "Watercolor on Paper",
+    "size": "",
+    "description": "Accompanied with a handsewn dress with inspiration from the painting.",
+    "featured": false
+  },
+  {
+    "id": "g11",
+    "file": "gallery11",
+    "title": "Still Life 1",
+    "alt": "Sunflower in a vase, surrrounded by greenery and a bowl of fruit.",
+    "year": "2019",
+    "medium": "Acrylic on Canvas",
+    "size": "9 × 12 in",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g12",
+    "file": "gallery12",
+    "title": "Chicago 1",
+    "alt": "Cityscape with stylized skyscrapers and blue sky",
+    "year": "2022",
+    "medium": "Acrylic on Canvas",
+    "size": "36 × 48 in",
+    "description": "Iconic buildings of Chicago",
+    "featured": false
+  },
+  {
+    "id": "g13",
+    "file": "gallery13",
+    "title": "Chicago 2",
+    "alt": "Two-panel cityscape with stylized skyscrapers and blue sky",
+    "year": "2022",
+    "medium": "Acrylic on Canvas",
+    "size": "36 × 48 in",
+    "description": "Iconic buildings of Chicago",
+    "featured": false
+  },
+  {
+    "id": "g14",
+    "file": "gallery14",
+    "title": "Still Life 2",
+    "alt": "Sunflowers in a glass jar, on an abstract background.",
+    "year": "2021",
+    "medium": "Oil on Canvas",
+    "size": "11 × 14 in",
+    "description": "",
+    "featured": false
+  },
+  {
+    "id": "g15",
+    "file": "gallery15",
+    "title": "Untitled",
+    "alt": "Orange face, blank white eyes, and blue hair.",
+    "year": "2022",
+    "medium": "Gouache on Paper",
+    "size": "",
+    "description": "",
+    "featured": false
+  }
+]
