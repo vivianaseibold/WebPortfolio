@@ -14,7 +14,6 @@ export default function Meta({ title, description }) {
       }
       tag.setAttribute("content", description);
 
-      // optional cleanup: restore previous description
       return () => prev !== undefined && tag.setAttribute("content", prev);
     }
   }, [title, description]);

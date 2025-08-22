@@ -1,8 +1,8 @@
-/* Light theme (default) */
+/* default light theme */
 :root {
   --bg: #fef3c7;     /* light cream background */
   --fg: #0f1530;     /* deep blue text */
-  --accent: #0f1530; /* for hover/button highlight */
+  --accent: #0f1530; /* for highlight */
   --muted: #2c3973;  /* subtitle in light mode */
 
   --inv-bg: #0f1530;  /* dark */
