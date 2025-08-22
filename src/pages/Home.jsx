@@ -1,6 +1,8 @@
 import "./home.css"; 
 import Meta from "../components/Meta.jsx";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Home() {
   return (
     <>
@@ -25,8 +27,8 @@ export default function Home() {
         </header>
         <img 
           className="home-image" 
-          src={"public/images/homepageimg.jpg"} a
-          lt={"image of my artwork at a city-wide school exhbition"} 
+          src={`${BASE}images/homepageimg.jpg`}
+          alt={"image of my artwork at a city-wide school exhbition"} 
         />
       </div>
     </>
