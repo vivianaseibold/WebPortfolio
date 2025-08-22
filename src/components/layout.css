@@ -1,18 +1,16 @@
-/* --- sizing reset so padding doesn't increase element height --- */
 *,
 *::before,
 *::after { box-sizing: border-box; }
 
-/* === SITE GRID === */
 .site-grid {
   display: grid;
-  grid-template-columns: clamp(260px, 35vw, 420px) 1fr; /* left fixed-ish, right flexible */
-  height: 100svh;                                      /* lock grid to viewport height */
+  grid-template-columns: clamp(260px, 35vw, 420px) 1fr; 
+  height: 100svh;                                     
   background: var(--bg);
   color: var(--fg);
 }
 
-/* === SIDEBAR (LEFT) — fits one screen === */
+/* lhs stays still */
 .sidebar {
   position: sticky;
   top: 0;
@@ -21,7 +19,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  /* ↓ was: padding: 3rem 2rem;  now add more top space but keep responsive */
   padding: clamp(2rem, 10vh, 6rem) 2rem 2.25rem;
   gap: 1rem;
   background: var(--bg);
@@ -30,7 +27,7 @@
 .sidebar-top,
 .sidebar-bottom { align-self: stretch; }
 
-/* Title (clickable) */
+/* make the title the button for the homescreen */
 .home-title {
   margin: 0 0 clamp(0.75rem, 2.5vh, 1.25rem);
   font-size: 3.2rem;
@@ -48,15 +45,15 @@
 .home-title-link:hover,
 .home-title-link:focus { background: var(--accent); color: var(--bg); }
 
-/* Subtitle */
+/* formatting the subtitle */
 .home-subtitle {
-  margin: 0 0 clamp(2rem, 7vh, 4rem);   /* bigger bottom margin */
+  margin: 0 0 clamp(2rem, 7vh, 4rem);   
   color: var(--muted);
   font-size: 1.2rem;
   line-height: 1.4;
 }
 
-/* === NAV === */
+/* navigation styling */
 .home-nav ul {
   list-style: none;
   padding: 0;
@@ -69,7 +66,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--muted);                 /* inactive color */
+  color: var(--muted);           
 }
 .home-nav li::before {
   content: "";
@@ -96,12 +93,12 @@
   padding: .2rem .5rem;
 }
 
-/* === BOTTOM-LEFT: contact row === */
+/* contact button and social media icons are on the bottom left corner*/
 .sidebar-bottom {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;             /* flush-left */
+  align-items: flex-start;            
 }
 .contact-row {
   display: flex;
@@ -133,16 +130,15 @@
 .social-icons a:hover,
 .social-icons a:focus { color: var(--accent); }
 
-/* === CONTENT (RIGHT) — only this scrolls === */
+/* rhs is the only side that the user can scroll through*/
 .content {
-  height: 100%;                        /* fill the grid row */
-  overflow: auto;                      /* internal scroll */
+  height: 100%;                        
+  overflow: auto;                      
   padding: 3rem 2rem;
   position: relative;
   z-index: 1;
 }
 
-/* keep padding inside the 100% height */
 .content,
 .sidebar,
 .site-grid { box-sizing: border-box; }
@@ -153,7 +149,7 @@
   line-height: 1.7;
 }
 
-/* === THEME TOGGLE — fixed top-right of screen === */
+/* theme switcher button */
 .theme-toggle {
   position: fixed;
   top: 1rem;
@@ -171,12 +167,12 @@
 .theme-toggle:hover,
 .theme-toggle:focus { opacity: .9; outline: 2px solid var(--fg); }
 
-/* === REDUCE MOTION === */
+/* reduce motion */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
 
-/* === RESPONSIVE (stack on small screens) === */
+/* for smaller screens responsiveness*/
 @media (max-width: 900px) {
   .site-grid { grid-template-columns: 1fr; height: auto; }
   .sidebar {
