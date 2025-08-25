@@ -27,7 +27,7 @@ const STITCH_SAMPLES = [
     img: asset("Stitch1.png"),
     alt: "Preview frame from STITCH Spotted street style feature" },
   { id: "stitch2", title: "Rebrand Graphic",
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/p/DIUhaXwJTWM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     img: asset("Stitch2.png"),
     alt: "Weekly Newsletter" },
   { id: "stitch3", title: "Weekly Newsletter",
