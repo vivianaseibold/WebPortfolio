@@ -27,7 +27,7 @@ export default function Layout() {
           <div className="contact-row">
             <a className="contact-button" href="mailto: vivianaseibold2027@u.northwestern.edu">Contact Me</a>
             <div className="social-icons" aria-label="Social links">
-              <a href="https://instagram.com/vivianaseiboldd" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://instagram.com/vivianaseiboldart" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
               <a href="https://linkedin.com/in/viviana-seibold" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
