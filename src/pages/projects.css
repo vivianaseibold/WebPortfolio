@@ -142,7 +142,7 @@
 
 /* constrain the slider itself so arrows align with the image */
 .campaign-media .slick-slider {
-  max-height: 1000px;                 /* <— tune this if you want smaller/larger */
+  max-height: 575px;                 /* <— tune this if you want smaller/larger */
   margin-left: auto;                /* push to the right */
 }
 
