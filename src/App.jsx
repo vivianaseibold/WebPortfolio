@@ -6,6 +6,7 @@ import CS from "./pages/CS";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import "./theme.css"; 
+import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
