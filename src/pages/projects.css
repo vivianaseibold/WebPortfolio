@@ -112,20 +112,47 @@
   min-width: 0;
   }        
 
-.campaign { max-width: 900px; margin: 4rem auto; text-align: center; }
-.campaign-title { font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem; }
-.campaign .slick-slide > div { display:flex; justify-content:center; }
-.campaign .slick-list { border-radius: 12px; }
-
-.campaign-img {
-  max-width: 100%;
-  max-height: 68vh;      /* keeps it within the viewport height */
-  width: auto;
-  height: auto;
-  object-fit: contain;   /* no crop; whole image visible */
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+.campaign {
+  max-width: 820px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
 }
-.slick-slide { padding: 0 .25rem; }
-.slick-dots li button:before { opacity: .5; }
-.slick-dots li.slick-active button:before { opacity: 1; }
+
+/* keep the slideshow nicely centered */
+.campaign .slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+.campaign .slick-list {
+  border-radius: 12px;
+}
+
+/* the frame for each slide */
+.slide-frame {
+  position: relative;
+  width: 100%;
+  max-width: 620px;       /* keeps slides narrow on desktop */
+  aspect-ratio: 4 / 5;    /* vertical ratio similar to Instagram posts */
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* image fills frame neatly */
+.slide-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills frame */
+  object-position: center;
+}
+
+/* caption spacing + subtle text size */
+.campaign-caption {
+  margin-top: 1rem;
+  color: var(--fg-light, #ccc);
+  font-size: 0.95rem;
+}

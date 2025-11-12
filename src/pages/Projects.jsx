@@ -79,7 +79,9 @@ function CampaignSlider({ title, slides, caption }) {
       <Slider {...settings}>
         {slides.map((img, i) => (
           <div key={i}>
-            <img src={img} alt={`${title} sample ${i + 1}`} className="campaign-img" />
+            <div className="slide-frame">
+              <img src={img} alt={`${title} sample ${i + 1}`} />
+            </div>
           </div>
         ))}
       </Slider>
