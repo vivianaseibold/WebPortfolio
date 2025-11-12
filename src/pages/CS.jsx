@@ -82,6 +82,7 @@ export default function CS() {
             <li key={"CSS"} className="cs-tag">{"CSS"}</li>
             <li key={"Bootstrap"} className="cs-tag">{"Bootstrap"}</li>
             <li key={"Git"} className="cs-tag">{"Git"}</li>
+            <li key={"Git"} className="cs-tag">{"Kali Linux"}</li>
           </ul>
         </header>
 

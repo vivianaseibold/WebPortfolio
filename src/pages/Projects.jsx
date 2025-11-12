@@ -103,7 +103,7 @@ export default function Projects() {
         <p className="proj-section__blurb">
           As VP of Content & PR and Graphics Chair for the founding chapter of Spoon University,
           I built our posting workflow, delegate assignments across the content/PR team, and lead
-          outreach to Chicagoland restaurants and cafés (including Michelin Bib&nbsp;Gourmand) for
+          outreach to Chicagoland restaurants and cafés (including Michelin Bib&nbsp;Gourmand restaurants) for
           collaborations. I curate and produce everything from new-restaurant reels to “What I Eat
           in a Day” story takeovers, and design the graphics for events and features.
         </p>
@@ -180,6 +180,21 @@ export default function Projects() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section id="marketing" className="proj-section">
+        <div className="proj-section__head">
+          <h2 className="proj-section__title">Marketing & Design Samples/h2>
+
+        {/* map items from STITCH_SAMPLES array*/}
+        <p className="proj-section__blurb">
+          Here are couple samples of my work exploring the intersection of marketing, design, tech, fashion, and art. 
+          Each project reflects my passion for creating thoughtful, visually engaging, and strategic brand experiences — 
+          from digital campaigns and creative direction to visual identity and product storytelling.
+          I’ve developed these projects surrounding personal interest using tools like Canva, Figma, and Gemini, 
+          combining creativity with data-driven insight to bring ideas to life.
+        </p>
+
       </section>
     </div>
   </>
