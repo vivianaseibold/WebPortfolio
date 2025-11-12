@@ -65,6 +65,12 @@ function CampaignSlider({ title, slides, caption }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: "0px",
+    responsive: [
+      { breakpoint: 900, settings: { arrows: false } },
+    ],
   };
 
   return (

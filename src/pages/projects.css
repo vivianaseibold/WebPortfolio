@@ -114,7 +114,18 @@
 
 .campaign { max-width: 900px; margin: 4rem auto; text-align: center; }
 .campaign-title { font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem; }
-.campaign-img { width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.campaign .slick-slide > div { display:flex; justify-content:center; }
+.campaign .slick-list { border-radius: 12px; }
+
+.campaign-img {
+  max-width: 100%;
+  max-height: 68vh;      /* keeps it within the viewport height */
+  width: auto;
+  height: auto;
+  object-fit: contain;   /* no crop; whole image visible */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
 .slick-slide { padding: 0 .25rem; }
 .slick-dots li button:before { opacity: .5; }
 .slick-dots li.slick-active button:before { opacity: 1; }
