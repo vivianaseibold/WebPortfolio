@@ -264,15 +264,14 @@ export default function Projects() {
       <CampaignCase
         title="Forma Studios — Wellness Boutique"
         slides={formaSlides}
-        caption="Brand identity and Instagram campaign for an aesthetic, all-inclusive fitness studio concept. <br>
-        Featuring Instagram posts and graphics, and merch mock-ups.
-        "
+        caption="Brand identity and Instagram campaign for an aesthetic, all-inclusive fitness studio concept. 
+        Featuring Instagram posts and graphics, and merch mock-ups."
       />
 
       <CampaignCase
         title="Zadig & Voltaire × Red Bull Racing"
         slides={zadigSlides}
-        caption="Concept campaign blending two of my favorite interests: French rock-chic fashion brand Zadig & Voltaire and Formula 1 team RedBull Racing. <br>
+        caption="Concept campaign blending two of my favorite interests: French rock-chic fashion brand Zadig & Voltaire and Formula 1 team RedBull Racing.
         This project merges the edgy, Parisian streetwear aesthetic of Zadig & Voltaire with the high-performance, adrenaline-fueled world of F1 to create a steampunk-inspired,
          fashion-forward campaign — celebrating the intersection of luxury fashion and performance culture.
         "

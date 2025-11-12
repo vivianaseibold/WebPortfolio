@@ -1,7 +1,7 @@
 import "./resume.css";
 import Meta from "../components/Meta.jsx";
 
-const RESUME_URL = `${import.meta.env.BASE_URL}docs/resume.pdf`; // turn pdf into a public link
+const RESUME_URL = `${import.meta.env.BASE_URL}docs/updatedresume.pdf`; // turn pdf into a public link
 
 export default function Resume() {
   return (
