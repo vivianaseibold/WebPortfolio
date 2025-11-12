@@ -142,6 +142,12 @@ export default function Projects() {
               STITCH Fashion
             </button>
           </li>
+          {/* button to jump to marketing section */}
+          <li>
+            <button type="button" className="proj-tag" onClick={() => scrollToSection("marketing")}>
+              Marketing Samples
+            </button>
+          </li>
         </ul>
       </header>
 
@@ -240,6 +246,19 @@ export default function Projects() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section id="marketing" className="proj-section">
+        <div className="proj-section__head">
+          <h2 className="proj-section__title">Marketing & Design Samples</h2>
+        </div>
+
+        <p className="proj-section__blurb">
+          Here’s a collection of my work exploring the intersection of marketing, design, tech, fashion, and art. 
+          Each project reflects my passion for creating thoughtful, visually engaging, and strategic brand experiences — 
+          from digital campaigns and creative direction to visual identity and product storytelling. I’ve developed these 
+          projects using tools like <strong>Canva, Figma, and Gemini</strong>, combining creativity with data-driven insight to bring ideas to life.
+        </p>
       </section>
 
       <CampaignCase
