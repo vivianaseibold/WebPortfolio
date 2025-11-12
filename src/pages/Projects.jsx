@@ -194,7 +194,7 @@ export default function Projects() {
           I’ve developed these projects surrounding personal interest using tools like Canva, Figma, and Gemini, 
           combining creativity with data-driven insight to bring ideas to life.
         </p>
-
+        </div>
       </section>
     </div>
   </>
