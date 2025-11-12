@@ -110,4 +110,11 @@
   flex-direction: column;
   gap: .25rem;          
   min-width: 0;
-  }         
+  }        
+
+.campaign { max-width: 900px; margin: 4rem auto; text-align: center; }
+.campaign-title { font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem; }
+.campaign-img { width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.slick-slide { padding: 0 .25rem; }
+.slick-dots li button:before { opacity: .5; }
+.slick-dots li.slick-active button:before { opacity: 1; }
