@@ -1,5 +1,8 @@
 import "./projects.css";
 import Meta from "../components/Meta.jsx";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const BASE = import.meta.env.BASE_URL;
 const asset = (p) => `${BASE}images/${p}`;
@@ -35,6 +38,49 @@ const STITCH_SAMPLES = [
     img: asset("Stitch3.png"),
     alt: "Graphic for STITCH rebrand" },
 ];
+
+const formaSlides = [
+  "/images/FormaStudios1.png",
+  "/images/FormaStudios2.png",
+  "/images/FormaStudios3.png",
+  "/images/FormaStudios4.png",
+  "/images/FormaStudios5.png",
+  "/images/FormaStudios6.png",
+  "/images/FormaStudios7.png"
+];
+
+const zadigSlides = [
+  "/images/RBRxZV1.png",
+  "/images/RBRxZV2.png",
+  "/images/RBRxZV3.png",
+  "/images/RBRxZV4.png",
+  "/images/RBRxZV5.png",
+];
+
+function CampaignSlider({ title, slides, caption }) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
+  return (
+    <div className="campaign">
+      <h2 className="campaign-title">{title}</h2>
+      <Slider {...settings}>
+        {slides.map((img, i) => (
+          <div key={i}>
+            <img src={img} alt={`${title} sample ${i + 1}`} className="campaign-img" />
+          </div>
+        ))}
+      </Slider>
+      <p className="campaign-caption">{caption}</p>
+    </div>
+  );
+}
 
 export default function Projects() {
   //buttons scroll to dedicated sections
@@ -182,20 +228,17 @@ export default function Projects() {
         </div>
       </section>
 
-      <section id="marketing" className="proj-section">
-        <div className="proj-section__head">
-          <h2 className="proj-section__title">Marketing & Design Samples/h2>
+      <CampaignSlider
+        title="Forma Studios — Wellness Boutique"
+        slides={formaSlides}
+        caption="Brand identity and Instagram campaign for a women’s fitness studio concept."
+      />
 
-        {/* map items from STITCH_SAMPLES array*/}
-        <p className="proj-section__blurb">
-          Here are couple samples of my work exploring the intersection of marketing, design, tech, fashion, and art. 
-          Each project reflects my passion for creating thoughtful, visually engaging, and strategic brand experiences — 
-          from digital campaigns and creative direction to visual identity and product storytelling.
-          I’ve developed these projects surrounding personal interest using tools like Canva, Figma, and Gemini, 
-          combining creativity with data-driven insight to bring ideas to life.
-        </p>
-        </div>
-      </section>
+      <CampaignSlider
+        title="Zadig & Voltaire × Red Bull Racing"
+        slides={zadigSlides}
+        caption="Concept campaign blending French rock-chic fashion and Formula 1 branding."
+      />
     </div>
   </>
   );
