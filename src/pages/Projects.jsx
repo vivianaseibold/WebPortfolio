@@ -40,21 +40,21 @@ const STITCH_SAMPLES = [
 ];
 
 const formaSlides = [
-  asset"FormaStudios1.png",
-  asset"FormaStudios2.png",
-  asset"FormaStudios3.png",
-  asset"FormaStudios4.png",
-  asset"FormaStudios5.png",
-  asset"FormaStudios6.png",
-  asset"FormaStudios7.png"
+  asset("FormaStudios1.png"),
+  asset("FormaStudios2.png"),
+  asset("FormaStudios3.png"),
+  asset("FormaStudios4.png"),
+  asset("FormaStudios5.png"),
+  asset("FormaStudios6.png"),
+  asset("FormaStudios7.png")
 ];
 
 const zadigSlides = [
-  asset"RBRxZV1.png",
-  asset"RBRxZV2.png",
-  asset"RBRxZV3.png",
-  asset"RBRxZV4.png",
-  asset"RBRxZV5.png",
+  asset("RBRxZV1.png"),
+  asset("RBRxZV2.png"),
+  asset("RBRxZV3.png"),
+  asset("RBRxZV4.png"),
+  asset("RBRxZV5.png"),
 ];
 
 function CampaignSlider({ title, slides, caption }) {
