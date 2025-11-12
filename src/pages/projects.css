@@ -116,7 +116,7 @@
 .projects-page { max-width: 1200px; margin: 0 auto; }
 
 .campaign {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 3rem auto 4rem;
   padding: 0 1rem;
   position: relative;
@@ -142,7 +142,7 @@
 
 /* constrain the slider itself so arrows align with the image */
 .campaign-media .slick-slider {
-  max-width: 680px;                 /* <— tune this if you want smaller/larger */
+  max-width: 640px;                 /* <— tune this if you want smaller/larger */
   margin-left: auto;                /* push to the right */
 }
 
