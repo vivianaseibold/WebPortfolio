@@ -38,6 +38,18 @@ const COURSES = [
     description:
       "Abstract data types, structure and algorithms, spanning topics on lists, stacks, queues and heaps, search trees, sorting, hash tables, graphs, and least-cost path calculations.",
   },
+  {
+    classNum: "CS 396 (taken through IES Abroad)",
+    title: "Introduction to Computer Security and Cryptography",
+    description:
+      "Foundational course in front-end web development covering semantic HTML, modern CSS (layout, responsive design, basic animations), and introductory JavaScript for interactivity.",
+  },
+  {
+    classNum: "CS 350 (taken through IES Abroad)",
+    title: "Introduction to Computer Security and Cryptography",
+    description:
+      "Fundamental principles and techniques of information security: cryptography, authentication, vulnerabilities, and defenses such as firewalls, VPNs, and intrusion detection systems.",
+  }
 ];
 
 export default function CS() {
