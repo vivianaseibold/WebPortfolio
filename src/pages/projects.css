@@ -115,75 +115,70 @@
 /* overall page width */
 .projects-page { max-width: 1200px; margin: 0 auto; }
 
-/* case-study block */
 .campaign {
+  max-width: 1200px;
   margin: 3rem auto 4rem;
   padding: 0 1rem;
+  position: relative;
+  z-index: 1;               /* keep above any overlapping stuff */
 }
 
-/* two columns, vertically centered, fits in one screen */
+/* two columns, vertically centered, guaranteed visible */
 .campaign-row {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;  /* text : media */
+  grid-template-columns: 1fr 1.2fr;   /* text : media */
   align-items: center;
   gap: 2rem;
-  min-height: min(78vh, 820px);      /* fits on screen */
+  min-height: 72vh;                   /* fits on one screen */
 }
 
 /* left column */
 .campaign-copy { align-self: center; }
-.campaign-title { font-size: 2rem; line-height: 1.2; margin: 0 0 .75rem; }
-.campaign-caption { opacity: .85; font-size: 1rem; }
+.campaign-title { margin: 0 0 .75rem; font-size: 2rem; line-height: 1.2; }
+.campaign-caption { margin: 0; opacity: .9; }
 
 /* right column (slider) */
 .campaign-media { width: 100%; }
 
-/* slide frame keeps consistent card size */
+/* constrain the slider itself so arrows align with the image */
+.campaign-media .slick-slider {
+  max-width: 680px;                 /* <— tune this if you want smaller/larger */
+  margin-left: auto;                /* push to the right */
+}
+
+/* frame that controls the image size/ratio */
 .slide-frame {
   position: relative;
   width: 100%;
-  max-width: 720px;          /* keeps it tidy */
-  margin-left: auto;         /* bias to the right */
-  aspect-ratio: 4 / 5;       /* IG-like portrait; try 16/10 if your images are wide */
+  aspect-ratio: 4 / 5;              /* try 16/10 if your images are landscape */
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0,0,0,.12);
 }
 
-/* image fills frame */
 .slide-frame > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
 }
 
-/* center arrows on the media column */
-.campaign .slick-prev,
-.campaign .slick-next {
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
+/* center the arrows vertically on the image */
+.campaign .slick-prev, .campaign .slick-next {
+  top: 50%; transform: translateY(-50%); z-index: 2;
 }
-
 .campaign .slick-prev { left: -18px; }
 .campaign .slick-next { right: -18px; }
-
-/* dots in a comfortable spot */
 .campaign .slick-dots { bottom: -26px; }
 .campaign .slick-dots li button:before { opacity: .5; }
 .campaign .slick-dots li.slick-active button:before { opacity: 1; }
 
-/* responsive: stack on mobile */
+/* IG grid images (Spoon/STITCH) — make sure they actually show */
+.ig-thumb { width: 100%; height: auto; display: block; }
+
+/* mobile: stack cleanly */
 @media (max-width: 900px) {
-  .campaign-row {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    gap: 1.25rem;
-  }
-  .slide-frame { max-width: 100%; margin-left: 0; }
+  .campaign-row { grid-template-columns: 1fr; min-height: auto; gap: 1.25rem; }
+  .campaign-media .slick-slider { max-width: 100%; margin-left: 0; }
+  .slide-frame { aspect-ratio: 4 / 5; }
   .campaign-title { font-size: 1.6rem; }
 }
-
