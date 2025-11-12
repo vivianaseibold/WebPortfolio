@@ -57,36 +57,42 @@ const zadigSlides = [
   asset("RBRxZV5.png"),
 ];
 
-function CampaignSlider({ title, slides, caption }) {
+function CampaignCase({ title, slides, caption }) {
   const settings = {
     dots: true,
+    arrows: true,
     infinite: true,
     speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
-    adaptiveHeight: true,
-    centerMode: true,
-    centerPadding: "0px",
-    responsive: [
-      { breakpoint: 900, settings: { arrows: false } },
-    ],
+    adaptiveHeight: false,   // we control height via CSS
+    centerMode: false,
+    responsive: [{ breakpoint: 900, settings: { arrows: false } }],
   };
 
   return (
-    <div className="campaign">
-      <h2 className="campaign-title">{title}</h2>
-      <Slider {...settings}>
-        {slides.map((img, i) => (
-          <div key={i}>
-            <div className="slide-frame">
-              <img src={img} alt={`${title} sample ${i + 1}`} />
-            </div>
-          </div>
-        ))}
-      </Slider>
-      <p className="campaign-caption">{caption}</p>
-    </div>
+    <section className="campaign">
+      <div className="campaign-row">
+        {/* LEFT = copy */}
+        <div className="campaign-copy">
+          <h2 className="campaign-title">{title}</h2>
+          <p className="campaign-caption">{caption}</p>
+        </div>
+
+        {/* RIGHT = media */}
+        <div className="campaign-media">
+          <Slider {...settings}>
+            {slides.map((img, i) => (
+              <div key={i}>
+                <div className="slide-frame">
+                  <img src={img} alt={`${title} sample ${i + 1}`} />
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -236,13 +242,13 @@ export default function Projects() {
         </div>
       </section>
 
-      <CampaignSlider
+      <CampaignCase
         title="Forma Studios — Wellness Boutique"
         slides={formaSlides}
         caption="Brand identity and Instagram campaign for a women’s fitness studio concept."
       />
 
-      <CampaignSlider
+      <CampaignCase
         title="Zadig & Voltaire × Red Bull Racing"
         slides={zadigSlides}
         caption="Concept campaign blending French rock-chic fashion and Formula 1 branding."
