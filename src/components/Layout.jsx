@@ -2,6 +2,7 @@ import { NavLink, Link, Outlet } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import "./layout.css";
 import Footer from "./Footer.jsx";
+import SignatureLogo from "./SignatureLogo";
 
 export default function Layout() {
   return (
@@ -9,7 +10,14 @@ export default function Layout() {
       <aside className="sidebar">
         <div className="sidebar-top">
           <h1 className="home-title">
-            <Link to="/" className="home-title-link">Viviana Seibold</Link>
+            <Link
+              to="/"
+              className="home-title-link"
+              aria-label="Viviana Seibold — Home"
+            >
+              <SignatureLogo className="signature-logo" />
+              <span className="sr-only">Viviana Seibold</span>
+            </Link>
           </h1>
           <h2 className="home-subtitle">Computer Science Student @ Northwestern University</h2>
 
@@ -26,7 +34,7 @@ export default function Layout() {
         {/* contact button and socials media icons in bottom left*/}
         <div className="sidebar-bottom">
           <div className="contact-row">
-            <a className="contact-button" href="mailto: vivianaseibold2027@u.northwestern.edu">Contact Me</a>
+            <a className="contact-button" href="mailto: ivianaseibold2027@u.northwestern.edu">Contact Me</a>
             <div className="social-icons" aria-label="Social links">
               <a href="https://instagram.com/vivianaseiboldart" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fa-brands fa-instagram" aria-hidden="true"></i>

@@ -32,18 +32,59 @@
   margin: 0 0 clamp(0.75rem, 2.5vh, 1.25rem);
   font-size: 3.2rem;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1;
 }
 
 .home-title-link {
   color: var(--fg);
   text-decoration: none;
-  border-radius: .4rem;
-  padding: .1rem .3rem;
-  transition: background-color .2s, color .2s;
+
+  /* KEY: make the anchor wrap the SVG, not the h1 line box */
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  /* KEY: remove huge text line-box effects from the h1 */
+  line-height: 0;
+
+  background: transparent;
+  border: 0;
+  padding: 4px;              /* breathing room for ring */
+  border-radius: 14px;
+  cursor: pointer;
+
+  transition: box-shadow .2s, transform .12s;
 }
+
 .home-title-link:hover,
-.home-title-link:focus { background: var(--accent); color: var(--bg); }
+.home-title-link:focus-visible {
+  box-shadow:
+    0 15px 30px -20px color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.home-title-link:active {
+  box-shadow:
+    0 10px 24px -18px color-mix(in srgb, currentColor 55%, transparent);
+}
+
+.signature-logo {
+  display: inline-block;
+  line-height: 0; /* avoids weird extra vertical space */
+}
+
+.signature-logo svg {
+  display: block;
+  height: 150px;   /* main size */
+  width: auto;
+  color: var(--fg); /* this drives currentColor */
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .signature-logo svg {
+    height: 34px;
+  }
+}
 
 /* formatting the subtitle */
 .home-subtitle {
@@ -51,6 +92,18 @@
   color: var(--muted);
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* navigation styling */
