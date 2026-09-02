@@ -126,8 +126,11 @@ function ProjectDetail({ detail, onBack }) {
 function FilterNav({ filter, onChange, standalone = false }) {
   return (
     <nav className={`work-filters${standalone ? " work-filters--standalone" : ""}`} aria-label="Filter work">
-      {FILTERS.map((item) => (
-        <button key={item.id} type="button" className={filter === item.id ? "is-selected" : ""} aria-pressed={filter === item.id} onClick={() => onChange(item.id)}>{item.label}</button>
+      {FILTERS.map((item, index) => (
+        <span className="work-filter-item" key={item.id}>
+          {index > 0 && <span className="work-filter-separator" aria-hidden="true">/</span>}
+          <button type="button" className={filter === item.id ? "is-selected" : ""} aria-pressed={filter === item.id} onClick={() => onChange(item.id)}>{item.label}</button>
+        </span>
       ))}
     </nav>
   );
@@ -136,7 +139,7 @@ function FilterNav({ filter, onChange, standalone = false }) {
 function SupportingArtwork({ project }) {
   if (project.id === "f1") return <MissingArtwork label="The F1 Files" />;
   if (project.id === "stitch") {
-    return <div className="work-art work-art--stitch"><img src={asset("TITCH_(5) copy.png")} alt="Send Fits design for STITCH Spotted" /></div>;
+    return <div className="work-art work-art--stitch"><img src={asset("TITCH_(6).png")} alt="Send Fits design for STITCH Spotted" /></div>;
   }
   return <div className="work-art work-art--spoon"><img src={asset("IMG_5923.jpg")} alt="Restaurant plate, menu, and lamp" /></div>;
 }
