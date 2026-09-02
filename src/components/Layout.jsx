@@ -6,8 +6,8 @@ import Footer from "./Footer.jsx";
 import SignatureLogo from "./SignatureLogo";
 
 const navigation = [
-  { label: "Work", to: "/projects" },
   { label: "About", to: "/" },
+  { label: "Work", to: "/projects" },
   { label: "Art", to: "/art" },
   { label: "Résumé", to: "/resume" },
 ];
