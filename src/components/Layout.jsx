@@ -54,16 +54,14 @@ export default function Layout() {
                 </li>
               ))}
               <li>
-                <a href="mailto: ivianaseibold2027@u.northwestern.edu" onClick={() => setMenuOpen(false)}>Contact</a>
-              </li>
-              <li className="nav-secondary">
-                <NavLink to="/cs" onClick={() => setMenuOpen(false)}>CS</NavLink>
+                <a href="mailto:ivianaseibold2027@u.northwestern.edu" onClick={() => setMenuOpen(false)}>Contact</a>
               </li>
             </ul>
           </nav>
         </div>
 
         <div className="sidebar-bottom">
+          <ThemeToggle />
           <div className="social-links" aria-label="Social links">
             <a href="https://instagram.com/vivianaseiboldart" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://linkedin.com/in/viviana-seibold" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -79,7 +77,6 @@ export default function Layout() {
         </div>
       </section>
 
-      <ThemeToggle />
     </div>
   );
 }

@@ -39,7 +39,12 @@ export default function Home() {
           </div>
           <div className="about-profile">
             <PortraitGrid />
-            <p>I’m a computer science student at Northwestern working across technology and creative strategy.</p>
+            <p>
+              I’m a computer science<br className="about-desktop-break" />
+              student at Northwestern<br className="about-desktop-break" />
+              working across technology<br className="about-desktop-break" />
+              and creative strategy.
+            </p>
           </div>
         </section>
       </div>
